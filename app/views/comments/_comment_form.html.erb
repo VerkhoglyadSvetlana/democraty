@@ -1,0 +1,9 @@
+<% form_for :action => 'add_comment' do |f|%>
+  <%= f.text_field 'comment', 'title' %>
+  <%= f.text_field 'comment', 'comment' %>
+
+  <%= f.submit 'Add Comment' %>
+
+  <%= hidden_field 'commentable', 'commentable', :value => @model.type %>
+  <%= hidden_field 'commentable', 'commentable_id', :value => @model.id %>
+<% end %>

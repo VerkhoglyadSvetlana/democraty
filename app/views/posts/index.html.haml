@@ -1,0 +1,13 @@
+.col-xs-6.col-md-4
+  %h3
+    Меню
+  %ul
+    - @posts.each do |e|
+      %li 
+        = link_to e.title, e, remote: true
+#content.col-xs-12.col-md-8
+  -if @post
+    = render partial: 'post', object: @post
+    
+  - else
+    %h1 Все 

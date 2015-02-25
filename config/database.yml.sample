@@ -1,0 +1,17 @@
+default: &default
+  adapter: postgresql
+  username: nikolay
+  password: 1q2w3456
+  host: localhost
+
+development:
+  <<: *default
+  database: democraty_dev
+
+test:
+  <<: *default
+  database: democraty_test
+
+production:
+  <<: *default
+  database: democraty_production
